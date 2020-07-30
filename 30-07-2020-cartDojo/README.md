@@ -16,7 +16,7 @@ As promoções do carrinho serão calculadas de acordo com as seguintes combina�
 * **`SINGLE LOOK`** - Se todos os produtos do carrinho pertencem a uma única categoria.
 * **`DOUBLE LOOK`** - Se pelo menos 2 produtos adicionados pertencem a categorias diferentes.
 * **`TRIPLE LOOK`**  - Se pelo menos 3 produtos pertencem a categorias diferentes.
-* **`FULL LOOK`** - Se pelo menos 4 produtos pertencem a mesma categoria.
+* **`FULL LOOK`** - Se pelo menos 4 produtos pertencem a categorias diferentes.
 
 > Se a combinação de produtos adicionados no carrinho corresponderem a uma das condições acima, o valor dos produtos que serão calculados serão os correspondentes na propriedade **`looks`**.
 
