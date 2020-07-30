@@ -6,12 +6,10 @@
 // Calcular a porcentagem de desconto
 // Montar o objeto de retorno
 
-const { products } = require('./products.json');
-
-const getProductsByIds = (ids) => {
+const getProductsByIds = (ids, products) => {
   return products.filter(item => ids.includes(item.id));
 }
 
 module.exports = {
-  soma,
+  getProductsByIds,
 }
