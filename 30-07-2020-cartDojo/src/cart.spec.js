@@ -72,3 +72,11 @@ describe('getProductsByIds', () => {
     expect(resultado).toEqual(mockGetProductsByIds)
   });
 });
+
+describe('getProductCategory', () => {
+  it('Deveria retornar a categoria de um produto recebido via props', () => {
+    const produtos = getProductsByIds([120, 230, 310, 490], products)
+    const resultado = getProductCategory(produtos)
+    expect(resultado).to
+  })
+})
