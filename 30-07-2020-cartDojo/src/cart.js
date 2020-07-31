@@ -6,10 +6,17 @@
 // Calcular a porcentagem de desconto
 // Montar o objeto de retorno
 
+
 const getProductsByIds = (ids, products) => {
   return products.filter(item => ids.includes(item.id));
 }
 
+const getProductCategory = (products) => {
+  const categories = products.map(item => item.category)
+  return [...new Set(categories)]
+}
+
 module.exports = {
   getProductsByIds,
+  getProductCategory
 }

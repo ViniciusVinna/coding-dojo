@@ -1,5 +1,5 @@
 const { products } = require('./products.json');
-const { getProductsByIds } = require('./cart');
+const { getProductsByIds, getProductCategory } = require('./cart');
 
 const mockGetProductsByIds = [
   {
@@ -75,8 +75,8 @@ describe('getProductsByIds', () => {
 
 describe('getProductCategory', () => {
   it('Deveria retornar a categoria de um produto recebido via props', () => {
-    const produtos = getProductsByIds([120, 230, 310, 490], products)
+    const produtos = getProductsByIds([120, 130, 210, 220], products)
     const resultado = getProductCategory(produtos)
-    expect(resultado).to
+    expect(resultado).toEqual(["T-SHIRTS", "PANTS"])
   })
 })
