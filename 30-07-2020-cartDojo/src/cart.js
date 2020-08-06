@@ -39,9 +39,20 @@ const getCartPromotion = (categories) => {
   }
 }
 
+const getTotalPriceWithPromotion = (promotion, products) => products.reduce((acc, item) => {
+  const matchValue = item.promotions.find(data => data.looks.includes(promotion));
+
+  if (matchValue) {
+    return acc + matchValue.price;
+  }
+
+  return acc + item.regularPrice
+}, 0)
+
 module.exports = {
   getProductsByIds,
   getProductCategory,
   getTotalPrice,
-  getCartPromotion
+  getCartPromotion,
+  getTotalPriceWithPromotion,
 }
