@@ -16,7 +16,14 @@ const getProductCategory = (products) => {
   return [...new Set(categories)]
 }
 
+const getTotalPrice = (products) => {
+  return products.reduce((value, item) => {
+    return value + item.regularPrice
+  }, 0)
+}
+
 module.exports = {
   getProductsByIds,
-  getProductCategory
+  getProductCategory,
+  getTotalPrice
 }

@@ -21,7 +21,7 @@ As promoções do carrinho serão calculadas de acordo com as seguintes combina�
 > Se a combinação de produtos adicionados no carrinho corresponderem a uma das condições acima, o valor dos produtos que serão calculados serão os correspondentes na propriedade **`looks`**.
 
 ### Você precisa resolver a seguinte situação:
-Dada a entrada de um **Array** com os `ids` dos produtos, um `objeto` contendo as seguintes proriedades deve ser retornado:
+Dada a entrada de um **Array** com os `ids` dos produtos, um `objeto` contendo as seguintes propriedades deve ser retornado:
 
  - Os nomes dos produtos e suas respectivas categorias.
  - A promoção aplicada para calcular os preços do carrinho, exemplo: `TRIPLE LOOK`.
