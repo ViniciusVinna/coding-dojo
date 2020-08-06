@@ -6,7 +6,6 @@
 // Calcular a porcentagem de desconto
 // Montar o objeto de retorno
 
-
 const getProductsByIds = (ids, products) => {
   return products.filter(item => ids.includes(item.id));
 }
@@ -17,7 +16,6 @@ const getProductCategory = (products) => {
 }
 
 const getTotalPrice = (products) => {
-   
   const resultado = products.reduce((value, item) => {
     return (value + item.regularPrice)
   }, 0).toFixed(2)
@@ -25,8 +23,25 @@ const getTotalPrice = (products) => {
   return parseFloat(resultado)
 }
 
+const getCartPromotion = (categories) => {
+  const length = categories.length
+  switch(length) {
+    case 1:
+      return "SINGLE LOOK"
+    case 2:
+      return "DOUBLE LOOK"
+    case 3:
+      return "TRIPLE LOOK"
+    case 4:
+      return "FULL LOOK"
+    default:
+      return "SINGLE LOOK"
+  }
+}
+
 module.exports = {
   getProductsByIds,
   getProductCategory,
-  getTotalPrice
+  getTotalPrice,
+  getCartPromotion
 }

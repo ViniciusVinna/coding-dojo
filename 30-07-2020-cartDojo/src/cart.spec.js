@@ -1,5 +1,5 @@
 const { products } = require('./products.json');
-const { getProductsByIds, getProductCategory, getTotalPrice } = require('./cart');
+const { getProductsByIds, getProductCategory, getTotalPrice, getCartPromotion } = require('./cart');
 
 const mockGetProductsByIds = [
   {
@@ -86,5 +86,14 @@ describe('getTotalPrice', () => {
     const produtos = getProductsByIds([120, 230, 310, 490], products)
     const resultado = getTotalPrice(produtos)
     expect(resultado).toBe(479.96)
+  })
+})
+
+describe('getCartPromotion', () => {
+  it('Deveria retornar a promoção que será aplicada', () => {
+    const produtos = getProductsByIds([120, 130, 210, 220], products)
+    const categories = getProductCategory(produtos)
+    const resultado = getCartPromotion(categories)
+    expect(resultado).toBe("DOUBLE LOOK")
   })
 })
