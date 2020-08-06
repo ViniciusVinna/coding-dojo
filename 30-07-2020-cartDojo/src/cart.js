@@ -17,9 +17,12 @@ const getProductCategory = (products) => {
 }
 
 const getTotalPrice = (products) => {
-  return products.reduce((value, item) => {
-    return value + item.regularPrice
-  }, 0)
+   
+  const resultado = products.reduce((value, item) => {
+    return (value + item.regularPrice)
+  }, 0).toFixed(2)
+
+  return parseFloat(resultado)
 }
 
 module.exports = {

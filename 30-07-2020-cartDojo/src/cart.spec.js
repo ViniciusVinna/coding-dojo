@@ -85,6 +85,6 @@ describe('getTotalPrice', () => {
   it('Deveria retornar o valor total sem desconto', () => {
     const produtos = getProductsByIds([120, 230, 310, 490], products)
     const resultado = getTotalPrice(produtos)
-    expect(resultado).toBe(404.96)
+    expect(resultado).toBe(479.96)
   })
 })
