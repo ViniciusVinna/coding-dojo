@@ -106,7 +106,7 @@ describe('getCartPromotion', () => {
 
 describe('getTotalPriceWithPromotion', () => {
   it('Deveria retornar a promoção que será aplicada', () => {
-    const produtos = getProductsByIds([120, 130, 210, 220], products)
+    const produtos = getProductsByIds([120, 230, 310, 490], products)
     const categories = getProductCategory(produtos)
     const promotion = getCartPromotion(categories)
 

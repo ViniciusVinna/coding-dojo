@@ -39,7 +39,7 @@ const getCartPromotion = (categories) => {
   }
 }
 
-const getTotalPriceWithPromotion = (promotion, products) => products.reduce((acc, item) => {
+const getTotalPriceWithPromotion = (promotion, products) => parseFloat(products.reduce((acc, item) => {
   const matchValue = item.promotions.find(data => data.looks.includes(promotion));
 
   if (matchValue) {
@@ -47,7 +47,7 @@ const getTotalPriceWithPromotion = (promotion, products) => products.reduce((acc
   }
 
   return acc + item.regularPrice
-}, 0)
+}, 0).toFixed(2))
 
 module.exports = {
   getProductsByIds,
