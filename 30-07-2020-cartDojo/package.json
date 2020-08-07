@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest src/cart.spec.js"
+    "test": "jest src/cart.spec.js",
+    "coverage": "jest src/cart.spec.js --coverage"
   },
   "author": "",
   "license": "ISC",

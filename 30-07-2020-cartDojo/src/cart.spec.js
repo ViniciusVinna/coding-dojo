@@ -96,11 +96,32 @@ describe('getTotalPrice', () => {
 })
 
 describe('getCartPromotion', () => {
+  it('Deveria retornar a promoção SINGLE LOOK', () => {
+    const produtos = getProductsByIds([120, 130, 110, 120], products)
+    const categories = getProductCategory(produtos)
+    const resultado = getCartPromotion(categories)
+    expect(resultado).toBe("SINGLE LOOK")
+  })
+
   it('Deveria retornar a promoção que será aplicada', () => {
     const produtos = getProductsByIds([120, 130, 210, 220], products)
     const categories = getProductCategory(produtos)
     const resultado = getCartPromotion(categories)
     expect(resultado).toBe("DOUBLE LOOK")
+  })
+
+  it('Deveria retornar a promoção TRIPLE LOOK', () => {
+    const produtos = getProductsByIds([120, 130, 210, 320], products)
+    const categories = getProductCategory(produtos)
+    const resultado = getCartPromotion(categories)
+    expect(resultado).toBe("TRIPLE LOOK")
+  })
+
+  it('Deveria retornar a promoção FULL LOOK', () => {
+    const produtos = getProductsByIds([120, 230, 310, 420], products)
+    const categories = getProductCategory(produtos)
+    const resultado = getCartPromotion(categories)
+    expect(resultado).toBe("FULL LOOK")
   })
 })
 
@@ -113,5 +134,15 @@ describe('getTotalPriceWithPromotion', () => {
     const resultado = getTotalPriceWithPromotion(promotion, produtos)
 
     expect(resultado).toBe(404.96)
+  })
+
+  it('Deveria retornar o valor padrão caso não seja encontrada nenhuma promoção', () => {
+    const produtos = getProductsByIds([240], products)
+    const categories = getProductCategory(produtos)
+    const promotion = getCartPromotion(categories)
+
+    const resultado = getTotalPriceWithPromotion(promotion, produtos)
+
+    expect(resultado).toBe(79.99)
   })
 })

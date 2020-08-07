@@ -26,8 +26,6 @@ const getTotalPrice = (products) => {
 const getCartPromotion = (categories) => {
   const length = categories.length
   switch(length) {
-    case 1:
-      return "SINGLE LOOK"
     case 2:
       return "DOUBLE LOOK"
     case 3:
