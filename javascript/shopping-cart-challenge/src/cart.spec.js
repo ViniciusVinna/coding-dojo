@@ -1,11 +1,11 @@
-const { products } = require('./products.json');
-const { 
-  getProductsByIds, 
-  getProductCategory, 
-  getTotalPrice, 
+const { products } = require('javascript/shopping-cart-challenge/src/products.json');
+const {
+  getProductsByIds,
+  getProductCategory,
+  getTotalPrice,
   getCartPromotion,
   getTotalPriceWithPromotion,
-} = require('./cart');
+} = require('javascript/shopping-cart-challenge/src/cart');
 
 const mockGetProductsByIds = [
   {
@@ -72,7 +72,7 @@ const mockGetProductsByIds = [
 
 describe('getProductsByIds', () => {
   it('deveria retornar um array de objetos baseados nos IDS', () => {
-    
+
     const resultado = getProductsByIds([120, 230, 310, 490], products)
 
     expect(resultado).toEqual(mockGetProductsByIds)
