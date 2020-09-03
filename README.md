@@ -43,14 +43,20 @@ Este é um repositório pessoal voltado exclusivamente para a pratica de **codin
 
 Os dois programadores alternam os papéis constantemente.
 
-## Requisitos
+## Requisitos 
 #### IDE
 * [Visual Studio Code](https://code.visualstudio.com/)
 #### Extensões obrigatórias
 * [Live Share Extension Pack](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack)
-#### Extensões opcionais
+
+#### Desafios em Javascript:
 * [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
 * [Jest Snippets](https://marketplace.visualstudio.com/items?itemName=andys8.jest-snippets)
+
+#### Desafios em Elixir:
+- **Erlang (23.0.2)**: Instalação via homebrew (MacOS) `brew install erlang`
+- **Elixir (1.10.4)**: Preferencialmente via **asdf**: [asdf-vm.com](http://asdf-vm.com/)
+- Extensão [VSCODE](https://github.com/elixir-lsp/vscode-elixir-ls)
 
 ## Contribuidores
 -   André Daniel [andredaniel](https://github.com/andredaniel)
